@@ -1,0 +1,44 @@
+---
+name: Предложить улучшение
+description: Идея новой возможности или изменения
+title: "[Идея]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Какую проблему это решает
+      description: Что сейчас неудобно или невозможно? Опишите ситуацию, а не готовое решение.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Что вы предлагаете
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Какие есть альтернативы
+      description: Что вы пробовали или рассматривали.
+  - type: dropdown
+    id: area
+    attributes:
+      label: К чему относится
+      options:
+        - Интерфейс (сайт)
+        - API
+        - Письма и уведомления
+        - Безопасность аккаунта
+        - Инфраструктура и развёртывание
+        - Документация
+        - Другое
+    validations:
+      required: true
+  - type: checkboxes
+    id: willing
+    attributes:
+      label: Участие
+      options:
+        - label: Готов(а) помочь с реализацией

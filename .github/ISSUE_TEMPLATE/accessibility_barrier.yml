@@ -1,0 +1,55 @@
+---
+name: Барьер доступности
+description: Что-то трудно или невозможно сделать с клавиатуры, программой чтения с экрана, при увеличении и т. п.
+title: "[Доступность]: "
+labels: ["accessibility"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо, что сообщаете: так мы можем исправлять реальные проблемы.
+        Подробнее о том, что уже учтено и какие у нас ограничения, — в [ACCESSIBILITY.md](https://github.com/co-visionnage/.github/blob/main/ACCESSIBILITY.md).
+  - type: textarea
+    id: task
+    attributes:
+      label: Что вы пытались сделать
+      placeholder: Например, войти в аккаунт, отметить сериал просмотренным, изменить настройки уведомлений.
+    validations:
+      required: true
+  - type: textarea
+    id: barrier
+    attributes:
+      label: Что помешало
+      description: Что вы увидели, услышали или не смогли сделать.
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Страница или экран
+      placeholder: Например, «Настройки → Уведомления» или адрес страницы
+  - type: dropdown
+    id: need
+    attributes:
+      label: С чем связана проблема
+      multiple: true
+      options:
+        - Клавиатура (фокус, порядок обхода)
+        - Программа чтения с экрана
+        - Увеличение или масштаб
+        - Цвет и контрастность
+        - Анимация или звук
+        - Размер элементов, управление касанием
+        - Тексты и понятность
+        - Другое
+  - type: textarea
+    id: tech
+    attributes:
+      label: Чем вы пользуетесь
+      description: Браузер, система, вспомогательные технологии (например, NVDA, VoiceOver, увеличение системы).
+      placeholder: Firefox 130, Windows 11, NVDA
+  - type: textarea
+    id: idea
+    attributes:
+      label: Как, по-вашему, это можно исправить
+      description: Необязательно.

@@ -1,0 +1,9 @@
+---
+blank_issues_enabled: false
+contact_links:
+  - name: Сообщить об уязвимости (закрыто)
+    url: https://github.com/co-visionnage/.github/blob/main/SECURITY.md
+    about: Уязвимости не обсуждаем публично. Прочитайте, как сообщить о проблеме безопасности закрыто.
+  - name: Помощь и поддержка
+    url: https://github.com/co-visionnage/.github/blob/main/SUPPORT.md
+    about: Куда обратиться с вопросом, проблемой с аккаунтом или нарушением кодекса поведения.

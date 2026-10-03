@@ -1,0 +1,59 @@
+---
+name: Сообщить об ошибке
+description: Что-то работает не так, как должно
+title: "[Ошибка]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо, что сообщаете. **Не указывайте пароли, токены, коды 2FA и чужие личные данные.**
+        Если это уязвимость, не создавайте issue, а прочитайте [SECURITY.md](https://github.com/co-visionnage/.github/blob/main/SECURITY.md).
+  - type: dropdown
+    id: area
+    attributes:
+      label: Где это происходит
+      options:
+        - Интерфейс (сайт)
+        - API
+        - Письма или push-уведомления
+        - Вход, регистрация, двухфакторная защита
+        - Инфраструктура и развёртывание
+        - Не знаю
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Что произошло
+      description: Опишите, что вы увидели.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Что ожидалось
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Как воспроизвести
+      placeholder: |
+        1. Откройте …
+        2. Нажмите …
+        3. Увидите …
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Окружение
+      description: Браузер и система, версия или коммит, если знаете.
+      placeholder: Firefox 130, Windows 11
+  - type: textarea
+    id: logs
+    attributes:
+      label: Логи и скриншоты
+      description: Текст ошибки, фрагмент логов, скриншот. Удалите из них всё секретное.
+      render: shell
